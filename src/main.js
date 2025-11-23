@@ -31,7 +31,7 @@ form.addEventListener("submit", async event => {
     try {
     const data = await getImagesByQuery(query);
 
-        if (!data.hits.length === 0) {
+        if (data.hits.length === 0) {
         clearGallery();
         iziToast.info({
         title: "Нічого не знайдено",
